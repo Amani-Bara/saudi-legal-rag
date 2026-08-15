@@ -71,6 +71,24 @@ Streaming Response (SSE) to User
 - 🏥 **Insurance regulatory coverage** — Insurance Authority regulations, Health Insurance Council rules, and Insurance Disputes Committee decisions, unified into the same retrieval pipeline as court judgments
 - 🧩 **Adaptive retrieval logic** — case-based sources get full-case reconstruction via case-ID re-fetch; regulation sources are retrieved as self-contained chunks (articles/circulars/policy sections), since they don't fragment across a larger case
 
+## 🖥️ Example: Full Legal Analysis in Action
+
+Query: "ما هي مدة تبادل المذكرات الجوابية أمام اللجان التأمينية؟" (What is the timeframe for exchanging response memoranda before insurance committees?)
+
+1. Structured Answer — Facts & Legal Issues
+The assistant summarizes the facts and identifies the legal questions before citing any source text.
+![Question and case summary](legal-ai-query-summary.png)
+
+2. Real Case Citations in Context
+The assistant doesn't just state the rule — it cross-references it against actual retrieved court judgments (case numbers included), showing how commercial courts have applied similar timeframes in practice, with a clear note distinguishing statutory text from case-law comparison.
+![Real case citations](Real-Case-Citations-in-Context.png)
+
+3. Confidence Score & Ranked Sources
+Every answer ends with an overall confidence rating and a transparent list of the exact judgments/regulations used, each with a relevance score from the reranking step — so every claim in the answer is traceable back to its source.
+![Confidence score and ranked sources](legal-ai-sources-confidence.png)
+
+
+
 ## 🔄 RAG Pipeline (simplified)
 
 ```python
